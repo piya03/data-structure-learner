@@ -1,0 +1,43 @@
+.box1 {
+    background: antiquewhite;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    font-size: 18px;
+}
+.box2{
+    background: yellowgreen;
+}
+.box3{
+    background:aqua;
+
+}
+.box2 , .box3 {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+}
+.box4{
+    width: 100px;
+    height: 100px;
+    background: pink;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+}
