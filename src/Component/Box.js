@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 
 let array = [1, [2, 3]];
-console.log("array start", array);
 
 function test(arr) {
   console.log("test -> arr", arr);
