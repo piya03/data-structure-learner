@@ -4,7 +4,6 @@ import "./style.css";
 let array = [1, [2, 3]];
 
 function test(arr) {
-  console.log("test -> arr", arr);
   let res = [];
   for (let i = 0; i < arr.length; i++) {
     if (Array.isArray(arr[i])) {
@@ -12,7 +11,6 @@ function test(arr) {
     } else {
       res.push(arr[i]);
     }
-    console.log("test -> res", res);
   }
   return res;
 }
