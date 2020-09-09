@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 
 let array = [1, [2, 3]];
-
+//flatten
 function test(arr) {
   let res = [];
   for (let i = 0; i < arr.length; i++) {
