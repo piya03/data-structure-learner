@@ -41,3 +41,29 @@
     cursor: pointer;
     margin: 10px;
 }
+/* /////////////// */
+.multiBox{
+    height: 120px;
+    width: 150px;
+    background: beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid teal;
+    border-radius: 5px;
+    margin: 10px;
+}
+.uniqueBtn{
+    display: flex;
+    background: aliceblue;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: cadetblue;
+    cursor: pointer;
+}
+.uniqueBtn:hover{
+    box-shadow: 0px 0px 5px grey;
+
+}
