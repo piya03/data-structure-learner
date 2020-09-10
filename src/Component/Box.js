@@ -35,7 +35,6 @@ function Box() {
       <button
         className="button"
         onClick={() => {
-          test(array);
           setshow(!show);
         }}
       >

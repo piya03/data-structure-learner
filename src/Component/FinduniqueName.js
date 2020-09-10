@@ -16,25 +16,53 @@ let multiName = [
 ];
 
 function unique(arr) {
-  console.log("unique");
+  let uniqueOne = arr.filter((each, index, array) => {
+    if (array.indexOf(each) === index) {
+      return true;
+    }
+  });
+  console.log(uniqueOne, "uniqueOneuniqueOneuniqueOne");
+  return uniqueOne;
 }
 
 function FinduniqueName() {
+  const [show, setShow] = useState(false);
+
+  console.log(show, "showshow");
   return (
     <div>
       <div> Find unique name</div>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
-        {multiName.map((each, index) => {
-          return (
-            <div key="index" className="multiBox">
-              {" "}
-              My name is {each}.
-            </div>
-          );
-        })}
-      </div>
-      <button className="uniqueBtn" onClick={unique}>
-        Show Unique Name
+      {!show && (
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
+          {multiName.map((each, index) => {
+            return (
+              <div key="index" className="multiBox">
+                {" "}
+                My name is {each}.
+              </div>
+            );
+          })}
+        </div>
+      )}
+      {show && (
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
+          {unique(multiName).map((each, index) => {
+            return (
+              <div key="index" className="multiBox">
+                {" "}
+                My name is {each}.
+              </div>
+            );
+          })}
+        </div>
+      )}
+      <button
+        className="uniqueBtn"
+        onClick={() => {
+          setShow(!show);
+        }}
+      >
+        {show ? "Show all name" : "Show Unique Name"}
       </button>
     </div>
   );
