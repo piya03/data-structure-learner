@@ -17,7 +17,7 @@ let multiName = [
 
 function unique(arr) {
   let uniqueOne = arr.filter((each, index, array) => {
-    if (array.indexOf(each) === index) {
+     if (array.indexOf(each) === index) {
       return true;
     }
   });
