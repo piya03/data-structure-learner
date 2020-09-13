@@ -12,7 +12,8 @@ let numbers = {
 function Swap() {
   const [show, setShow] = useState(false);
   const [data, setData] = useState([]);
-  console.log("Swap -> data", data);
+  const [formatData, setFormatData] = useState([]);
+  console.log("Swap -> formatData", formatData);
   function count(obj) {
     let res = [];
     for (const count in obj) {
@@ -22,9 +23,21 @@ function Swap() {
         value: obj[count],
       });
     }
-
-    console.log("count -> res", res);
     setData(res);
+    return res;
+  }
+
+  function swapCount(anyobj) {
+    console.log("swapCount -> anyobj", Object.keys(anyobj));
+    let arr = Object.keys(anyobj);
+    let res = [];
+    for (let i = 0; i < arr.length; i++) {
+      res.push({
+        label: anyobj[arr[i]],
+        value: arr[i],
+      });
+    }
+    setFormatData(res);
     return res;
   }
   useEffect(() => {
@@ -34,27 +47,35 @@ function Swap() {
     <div>
       <div>swap it</div>
       <div>
-        {data.map((each, index) => {
-          console.log("Swap -> eacggjgh", each);
-          return (
-            <div className="eachBox">
-              <div>{each.label}</div>
-              <div>{each.value}</div>
-            </div>
-          );
-        })}
-        {/* {count(obj).map((each, index, arr) => {
-          console.log("Swap -> arr", arr.each);
-          console.log("Swap -> each", each);
-          return (
-            <div>
-              <div></div>
-              <div></div>
-            </div>
-          );
-        })} */}
+        {!show &&
+          data.map((each, index) => {
+            console.log("Swap -> eacggjgh", each);
+            return (
+              <div className="eachBox">
+                <div>{each.label}</div>
+                <div>{each.value}</div>
+              </div>
+            );
+          })}
+        {show &&
+          formatData.map((each, index) => {
+            return (
+              <div className="eachBox">
+                <div>{each.label}</div>
+                <div>{each.value}</div>
+              </div>
+            );
+          })}
       </div>
-      <button onClick={() => count(numbers)}>Click</button>
+      <button
+        className="uniqueBtn"
+        onClick={() => {
+          setShow(!show);
+          swapCount(numbers);
+        }}
+      >
+        SWAP
+      </button>
     </div>
   );
 }
