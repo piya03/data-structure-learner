@@ -5,9 +5,10 @@ import FinduniqueName from "./Component/FinduniqueName";
 import Swap from "./Component/Swap";
 import Fibonacci from "./Component/Fibonacci/Fibonacci";
 import SumOddFibonacci from "./Component/Fibonacci/SumOddFibonacci";
-
+import AddPrimeNumber from "./Component/PrimeNumber/AddPrimeNumber";
 function App() {
   const [Fval, setFVal] = useState("");
+  const [primeVal, setPrimeVal] = useState("");
   console.log("App -> Fval", Fval);
   return (
     <div className="App">
@@ -24,7 +25,9 @@ function App() {
       >
         Fibonacci
       </button> */}
-      <div>
+
+      {/* ///////////////////////////////// */}
+      {/* <div>
         <input
           type="number"
           value={Fval}
@@ -39,6 +42,24 @@ function App() {
         }}
       >
         Sum All Odd Fibonacci
+      </button> */}
+
+      {/* /////////////////// */}
+      <input
+        type="number"
+        value={primeVal}
+        onChange={(e) => {
+          setPrimeVal(e.target.value);
+        }}
+      />
+      <button
+        onClick={() => {
+          let addPrime = AddPrimeNumber(primeVal);
+          alert(`primeVal value all prime number total is ${addPrime}.`);
+          console.log("App -> addPrime", addPrime);
+        }}
+      >
+        Sum All Prime Number
       </button>
     </div>
   );
