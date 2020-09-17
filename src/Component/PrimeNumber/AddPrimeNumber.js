@@ -4,8 +4,8 @@ export default function AddPrimeNumber(num) {
   function isPrime(anynum) {
     for (let i = 2; i < anynum; i++) {
       if (anynum % i === 0) return false;
-      return anynum !== 1 && anynum !== 0;
     }
+    return anynum !== 1 && anynum !== 0;
   }
 
   while (j <= num) {
@@ -17,3 +17,10 @@ export default function AddPrimeNumber(num) {
   }
   return res;
 }
+
+// for(let j = 1; j <= num; i++){
+//   if(isPrime(i)){
+//    // console.log(i)
+//     res += j
+//   }
+// }
