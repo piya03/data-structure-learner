@@ -6,9 +6,13 @@ import Swap from "./Component/Swap";
 import Fibonacci from "./Component/Fibonacci/Fibonacci";
 import SumOddFibonacci from "./Component/Fibonacci/SumOddFibonacci";
 import AddPrimeNumber from "./Component/PrimeNumber/AddPrimeNumber";
+import PrintAllPrimeNo from "./Component/PrimeNumber/PrintAllPrimeNo";
 function App() {
   const [Fval, setFVal] = useState("");
   const [primeVal, setPrimeVal] = useState("");
+  const [prime2, setPrime2] = useState("");
+  const [allPrimeNum, setAllPrimeNum] = useState([]);
+  console.log("App -> allPrimeNum", allPrimeNum);
   console.log("App -> Fval", Fval);
   return (
     <div className="App">
@@ -45,7 +49,7 @@ function App() {
       </button> */}
 
       {/* /////////////////// */}
-      <input
+      {/* <input
         type="number"
         value={primeVal}
         onChange={(e) => {
@@ -60,7 +64,29 @@ function App() {
         }}
       >
         Sum All Prime Number
+      </button> */}
+
+      {/* //////// */}
+      <input
+        type="number"
+        value={prime2}
+        onChange={(e) => {
+          setPrime2(e.target.value);
+        }}
+      />
+      <button
+        onClick={() => {
+          let addPrime = PrintAllPrimeNo(prime2);
+          setAllPrimeNum(addPrime);
+        }}
+      >
+        All Prime Number
       </button>
+      <div>
+        {allPrimeNum.map((each, i) => {
+          return <h1 key={i}>{each}</h1>;
+        })}
+      </div>
     </div>
   );
 }
