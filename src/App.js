@@ -7,6 +7,7 @@ import Fibonacci from "./Component/Fibonacci/Fibonacci";
 import SumOddFibonacci from "./Component/Fibonacci/SumOddFibonacci";
 import AddPrimeNumber from "./Component/PrimeNumber/AddPrimeNumber";
 import PrintAllPrimeNo from "./Component/PrimeNumber/PrintAllPrimeNo";
+import TitleCase from "./Component/TitleCase";
 function App() {
   const [Fval, setFVal] = useState("");
   const [primeVal, setPrimeVal] = useState("");
@@ -87,6 +88,15 @@ function App() {
           return <h1 key={i}>{each}</h1>;
         })}
       </div>
+
+      <button
+        onClick={() => {
+          const res = TitleCase("I'm a little tea pot");
+          console.log("TitleCaseTitleCase", res);
+        }}
+      >
+        Title case in console
+      </button>
     </div>
   );
 }
