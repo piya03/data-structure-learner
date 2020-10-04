@@ -8,6 +8,7 @@ import SumOddFibonacci from "./Component/Fibonacci/SumOddFibonacci";
 import AddPrimeNumber from "./Component/PrimeNumber/AddPrimeNumber";
 import PrintAllPrimeNo from "./Component/PrimeNumber/PrintAllPrimeNo";
 import TitleCase from "./Component/TitleCase";
+import FindUniqueNumber from "./Component/FindUnique/FindUniqueNumber";
 function App() {
   const [Fval, setFVal] = useState("");
   const [primeVal, setPrimeVal] = useState("");
@@ -96,6 +97,19 @@ function App() {
         }}
       >
         Title case in console
+      </button>
+      <button
+        onClick={() => {
+          const res = FindUniqueNumber(
+            [1, 2, 3],
+            [5, 2, 1, 4],
+            [2, 1],
+            [6, 7, 8]
+          );
+          console.log("FindUniqueNumber", res);
+        }}
+      >
+        Find Unique number in Array
       </button>
     </div>
   );
