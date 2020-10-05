@@ -9,6 +9,7 @@ import AddPrimeNumber from "./Component/PrimeNumber/AddPrimeNumber";
 import PrintAllPrimeNo from "./Component/PrimeNumber/PrintAllPrimeNo";
 import TitleCase from "./Component/TitleCase";
 import FindUniqueNumber from "./Component/FindUnique/FindUniqueNumber";
+import SearchAndReplace from "./Component/SearchAndReplace";
 function App() {
   const [Fval, setFVal] = useState("");
   const [primeVal, setPrimeVal] = useState("");
@@ -110,6 +111,19 @@ function App() {
         }}
       >
         Find Unique number in Array
+      </button>
+
+      <button
+        onClick={() => {
+          let res = SearchAndReplace(
+            "He is Sleeping on the couch",
+            "Sleeping",
+            "sitting"
+          );
+          console.log("SearchAndReplace", res);
+        }}
+      >
+        Search and Replace
       </button>
     </div>
   );
