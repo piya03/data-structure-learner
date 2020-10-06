@@ -10,6 +10,7 @@ import PrintAllPrimeNo from "./Component/PrimeNumber/PrintAllPrimeNo";
 import TitleCase from "./Component/TitleCase";
 import FindUniqueNumber from "./Component/FindUnique/FindUniqueNumber";
 import SearchAndReplace from "./Component/SearchAndReplace";
+import SeekAndDestroy from "./Component/SeekAndDestroy";
 function App() {
   const [Fval, setFVal] = useState("");
   const [primeVal, setPrimeVal] = useState("");
@@ -124,6 +125,15 @@ function App() {
         }}
       >
         Search and Replace
+      </button>
+
+      <button
+        onClick={() => {
+          let res = SeekAndDestroy([1, 2, 3, 1, 2, 3], 2, 3);
+          console.log("SeekAndDestroy", res);
+        }}
+      >
+        Seek And Destroy
       </button>
     </div>
   );
