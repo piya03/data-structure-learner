@@ -11,6 +11,7 @@ import TitleCase from "./Component/TitleCase";
 import FindUniqueNumber from "./Component/FindUnique/FindUniqueNumber";
 import SearchAndReplace from "./Component/SearchAndReplace";
 import SeekAndDestroy from "./Component/SeekAndDestroy";
+import DiffArray from "./Component/FindUnique/DiffArray";
 function App() {
   const [Fval, setFVal] = useState("");
   const [primeVal, setPrimeVal] = useState("");
@@ -134,6 +135,15 @@ function App() {
         }}
       >
         Seek And Destroy
+      </button>
+
+      <button
+        onClick={() => {
+          let res = DiffArray([1, 2, 3, 5], [1, 2, 3, 4, 15]);
+          console.log("DiffArray", res);
+        }}
+      >
+        Diff in Array
       </button>
     </div>
   );
