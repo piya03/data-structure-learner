@@ -12,6 +12,7 @@ import FindUniqueNumber from "./Component/FindUnique/FindUniqueNumber";
 import SearchAndReplace from "./Component/SearchAndReplace";
 import SeekAndDestroy from "./Component/SeekAndDestroy";
 import DiffArray from "./Component/FindUnique/DiffArray";
+import WhatIsInAName from "./Component/WhatIsInAName";
 function App() {
   const [Fval, setFVal] = useState("");
   const [primeVal, setPrimeVal] = useState("");
@@ -144,6 +145,19 @@ function App() {
         }}
       >
         Diff in Array
+      </button>
+
+      <button
+        onClick={() => {
+          let res = WhatIsInAName(
+            [{ apple: 1, bat: 2 }, { bat: 2 }, { apple: 1, bat: 2, cookie: 2 }],
+
+            { apple: 1, bat: 2 }
+          );
+          console.log("WhatIsInAName", res);
+        }}
+      >
+        WhatIsInAName
       </button>
     </div>
   );
