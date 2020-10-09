@@ -13,6 +13,7 @@ import SearchAndReplace from "./Component/SearchAndReplace";
 import SeekAndDestroy from "./Component/SeekAndDestroy";
 import DiffArray from "./Component/FindUnique/DiffArray";
 import WhatIsInAName from "./Component/WhatIsInAName";
+import MissingLetter from "./Component/MissingLetter";
 function App() {
   const [Fval, setFVal] = useState("");
   const [primeVal, setPrimeVal] = useState("");
@@ -158,6 +159,15 @@ function App() {
         }}
       >
         WhatIsInAName
+      </button>
+
+      <button
+        onClick={() => {
+          let res = MissingLetter("abce");
+          console.log("I am MissingLetter", res);
+        }}
+      >
+        Find Missing Letter
       </button>
     </div>
   );
