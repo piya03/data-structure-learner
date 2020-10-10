@@ -14,6 +14,7 @@ import SeekAndDestroy from "./Component/SeekAndDestroy";
 import DiffArray from "./Component/FindUnique/DiffArray";
 import WhatIsInAName from "./Component/WhatIsInAName";
 import MissingLetter from "./Component/MissingLetter";
+import ConvertHTMLEntities from "./Component/ConvertHTMLEntities";
 function App() {
   const [Fval, setFVal] = useState("");
   const [primeVal, setPrimeVal] = useState("");
@@ -168,6 +169,15 @@ function App() {
         }}
       >
         Find Missing Letter
+      </button>
+
+      <button
+        onClick={() => {
+          let res = ConvertHTMLEntities("Dolce & Gabbana");
+          console.log("ConvertHTMLEntities", res);
+        }}
+      >
+        Convert HTML Entities
       </button>
     </div>
   );
