@@ -17,7 +17,7 @@ let multiName = [
 
 function unique(arr) {
   let uniqueOne = arr.filter((each, index, array) => {
-     if (array.indexOf(each) === index) {
+    if (array.indexOf(each) === index) {
       return true;
     }
   });
@@ -30,7 +30,7 @@ function FinduniqueName() {
 
   console.log(show, "showshow");
   return (
-    <div>
+    <div className="findUniqueContainer">
       <div> Find unique name</div>
       {!show && (
         <div style={{ display: "flex", flexWrap: "wrap" }}>

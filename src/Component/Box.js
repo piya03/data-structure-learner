@@ -18,7 +18,7 @@ console.log(test(array), "hhhghjghjgf");
 function Box() {
   const [show, setshow] = useState(false);
   return (
-    <div className="App">
+    <div className="container1">
       {!show && (
         <div className="box1">
           {array[0]}

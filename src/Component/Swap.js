@@ -44,7 +44,7 @@ function Swap() {
     count(numbers);
   }, []);
   return (
-    <div>
+    <div className="swapContainer">
       <div>swap it</div>
       <div>
         {!show &&

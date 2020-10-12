@@ -25,11 +25,11 @@ function App() {
   console.log("App -> Fval", Fval);
   return (
     <div className="App">
-      <div>hello</div>
-      {/* <Box /> */}
-      {/* <FinduniqueName /> */}
-      {/* <Swap /> */}
-      {/* 
+      <h2 style={{ textAlign: "center" }}>Learning Data Structure</h2>
+      <Box />
+      <FinduniqueName />
+      <Swap />
+
       <button
         onClick={() => {
           const v = Fibonacci(7);
@@ -37,10 +37,10 @@ function App() {
         }}
       >
         Fibonacci
-      </button> */}
+      </button>
 
       {/* ///////////////////////////////// */}
-      {/* <div>
+      <div>
         <input
           type="number"
           value={Fval}
@@ -55,10 +55,10 @@ function App() {
         }}
       >
         Sum All Odd Fibonacci
-      </button> */}
+      </button>
 
       {/* /////////////////// */}
-      {/* <input
+      <input
         type="number"
         value={primeVal}
         onChange={(e) => {
@@ -73,7 +73,7 @@ function App() {
         }}
       >
         Sum All Prime Number
-      </button> */}
+      </button>
 
       {/* //////// */}
       <input
@@ -191,6 +191,7 @@ function App() {
       >
         Convert Binary To String
       </button>
+      <p>100 days of coding I complete today </p>
     </div>
   );
 }

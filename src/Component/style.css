@@ -1,3 +1,29 @@
+.container1, .findUniqueContainer , .swapContainer{
+    border: 3px solid yellowgreen;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.findUniqueContainer{
+    border: 3px solid #d64edf;
+}
+.swapContainer{
+    border: 3px solid #1f17a3;
+}
+button {
+    background-color: rgb(246 228 212);
+    color: #e36b14;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid;
+    margin: 20px;
+}
+button:hover{
+    box-shadow: 1px 1px 9px #d7d2d2;
+
+}
 .box1 {
     background: antiquewhite;
     height: 300px;

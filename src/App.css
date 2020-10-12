@@ -1,0 +1,20 @@
+
+.App{
+    margin: 20px 50px;
+}
+button {
+    background-color: rgb(246 228 212);
+    color: #e36b14;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid;
+    margin: 20px;
+
+}
+button:hover{
+    box-shadow: 1px 1px 9px #d7d2d2;
+
+}
