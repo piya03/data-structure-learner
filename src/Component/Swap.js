@@ -13,7 +13,6 @@ function Swap() {
   const [show, setShow] = useState(false);
   const [data, setData] = useState([]);
   const [formatData, setFormatData] = useState([]);
-  console.log("Swap -> formatData", formatData);
   function count(obj) {
     let res = [];
     for (const count in obj) {
@@ -28,7 +27,6 @@ function Swap() {
   }
 
   function swapCount(anyobj) {
-    console.log("swapCount -> anyobj", Object.keys(anyobj));
     let arr = Object.keys(anyobj);
     let res = [];
     for (let i = 0; i < arr.length; i++) {
@@ -49,7 +47,6 @@ function Swap() {
       <div>
         {!show &&
           data.map((each, index) => {
-            console.log("Swap -> eacggjgh", each);
             return (
               <div className="eachBox">
                 <div>{each.label}</div>

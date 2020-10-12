@@ -3,6 +3,7 @@
 // For the purpose of this exercise, you should also capitalize connecting words like "the" and "of".
 
 export default function TitleCase(str) {
+  console.log("TitleCase -> str", str);
   let convertToArray = str.toLowerCase().split(" ");
   let result = convertToArray.map((val) => {
     return val.replace(val.charAt(0), val.charAt(0).toUpperCase());

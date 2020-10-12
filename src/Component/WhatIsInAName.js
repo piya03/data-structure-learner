@@ -1,4 +1,5 @@
 export default function WhatIsInAName(collection, source) {
+  console.log("WhatIsInAName -> collection", collection);
   let sourceKey = Object.keys(source);
   console.log(sourceKey, "sourceKey");
   return collection.filter((each) => {

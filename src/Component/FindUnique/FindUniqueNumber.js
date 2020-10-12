@@ -1,7 +1,7 @@
 export default function FindUniqueNumber() {
   let res = [];
   let args = [...arguments];
-  console.log(args.length, "f");
+  console.log(args.length, "args.length");
   let concat = [].concat(...args);
   console.log(concat, "concat");
   for (let i = 0; i < concat.length; i++) {

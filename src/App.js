@@ -21,82 +21,85 @@ function App() {
   const [primeVal, setPrimeVal] = useState("");
   const [prime2, setPrime2] = useState("");
   const [allPrimeNum, setAllPrimeNum] = useState([]);
-  console.log("App -> allPrimeNum", allPrimeNum);
-  console.log("App -> Fval", Fval);
+
   return (
     <div className="App">
       <h2 style={{ textAlign: "center" }}>Learning Data Structure</h2>
       <Box />
       <FinduniqueName />
       <Swap />
-
-      <button
-        onClick={() => {
-          const v = Fibonacci(7);
-          console.log("App -> v ", v);
-        }}
-      >
-        Fibonacci
-      </button>
-
+      <div className="btn_top_div">
+        <button
+          onClick={() => {
+            const v = Fibonacci(7);
+            console.log("Fibonacci ", v);
+          }}
+        >
+          Fibonacci
+        </button>
+      </div>
       {/* ///////////////////////////////// */}
-      <div>
+      <div className="btn_top_div">
         <input
           type="number"
           value={Fval}
           onChange={(e) => setFVal(e.target.value)}
         />
-      </div>
-      <button
-        onClick={() => {
-          let see = SumOddFibonacci(Fval);
-          alert(`Sum of all odd Fibonacci ${see}`);
-          console.log("App -> see", see);
-        }}
-      >
-        Sum All Odd Fibonacci
-      </button>
 
+        <button
+          onClick={() => {
+            let see = SumOddFibonacci(Fval);
+            alert(`Sum of all odd Fibonacci ${see}`);
+            console.log("App -> see", see);
+          }}
+        >
+          Sum All Odd Fibonacci
+        </button>
+      </div>
       {/* /////////////////// */}
-      <input
-        type="number"
-        value={primeVal}
-        onChange={(e) => {
-          setPrimeVal(e.target.value);
-        }}
-      />
-      <button
-        onClick={() => {
-          let addPrime = AddPrimeNumber(primeVal);
-          alert(`primeVal value all prime number total is ${addPrime}.`);
-          console.log("App -> addPrime", addPrime);
-        }}
-      >
-        Sum All Prime Number
-      </button>
-
+      <div className="btn_top_div">
+        <input
+          type="number"
+          value={primeVal}
+          onChange={(e) => {
+            setPrimeVal(e.target.value);
+          }}
+        />
+        <button
+          onClick={() => {
+            let addPrime = AddPrimeNumber(primeVal);
+            alert(`primeVal value all prime number total is ${addPrime}.`);
+            console.log("App -> addPrime", addPrime);
+          }}
+        >
+          Sum All Prime Number
+        </button>
+      </div>
       {/* //////// */}
-      <input
-        type="number"
-        value={prime2}
-        onChange={(e) => {
-          setPrime2(e.target.value);
-        }}
-      />
-      <button
-        onClick={() => {
-          let addPrime = PrintAllPrimeNo(prime2);
-          setAllPrimeNum(addPrime);
-        }}
-      >
-        All Prime Number
-      </button>
-      <div>
-        {allPrimeNum.map((each, i) => {
-          return <h1 key={i}>{each}</h1>;
-        })}
+      <div className="btn_top_div">
+        <input
+          type="number"
+          value={prime2}
+          onChange={(e) => {
+            setPrime2(e.target.value);
+          }}
+        />
+        <button
+          onClick={() => {
+            let addPrime = PrintAllPrimeNo(prime2);
+            setAllPrimeNum(addPrime);
+          }}
+        >
+          All Prime Number
+        </button>
+        <div>
+          {allPrimeNum.map((each, i) => {
+            return <h1 key={i}>{each}</h1>;
+          })}
+        </div>
       </div>
 
+      <h2>All Prints in console</h2>
       <button
         onClick={() => {
           const res = TitleCase("I'm a little tea pot");

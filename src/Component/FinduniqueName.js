@@ -27,8 +27,6 @@ function unique(arr) {
 
 function FinduniqueName() {
   const [show, setShow] = useState(false);
-
-  console.log(show, "showshow");
   return (
     <div className="findUniqueContainer">
       <div> Find unique name</div>

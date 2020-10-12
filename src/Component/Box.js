@@ -14,7 +14,6 @@ function test(arr) {
   }
   return res;
 }
-console.log(test(array), "hhhghjghjgf");
 function Box() {
   const [show, setshow] = useState(false);
   return (
