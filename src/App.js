@@ -27,6 +27,7 @@ function App() {
       <h2 style={{ textAlign: "center" }}>Learning Data Structure</h2>
       <Box />
       <FinduniqueName />
+      <div>i m from master 2</div>
       <Swap />
       <div className="btn_top_div">
         <button
