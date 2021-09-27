@@ -26,7 +26,7 @@ function App() {
     <div className="App">
       <h2 style={{ textAlign: "center" }}>Learning Data Structure</h2>
       <Box />
-      <p>Learning git graph</p>
+      <p>Learning git graph master1</p>
       <FinduniqueName />
       <Swap />
       <div className="btn_top_div">
