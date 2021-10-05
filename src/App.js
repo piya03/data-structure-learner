@@ -26,8 +26,7 @@ function App() {
     <div className="App">
       <h2 style={{ textAlign: "center" }}>Learning Data Structure</h2>
       <Box />
-      <p>ok 2</p>
-      <p> git stash pop</p>
+      <p>now</p>
       <FinduniqueName />
       <div>i m from master 2</div>
       <Swap />
